@@ -38,7 +38,7 @@ function App() {
         </button>
       </div>
       {isLoading ? (
-        <div className="loader">Loading data...</div>
+        <p className="loader">Loading data...</p>
       ) : (
         weatherData?.temp_c && (
           <div className="weather-cards">
