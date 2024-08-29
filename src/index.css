@@ -1,13 +1,103 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+}
+html,
+body {
+  height: 100%;
+  background-color: azure;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.search-bar {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0.3em 0.3em 1em rgba(110, 105, 105, 0.4);
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(64, 199, 64);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.weather-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 30px;
+}
+
+.weather-card {
+  background-color: white;
+  padding: 25px;
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0.3em 0.3em 2em rgba(110, 105, 105, 0.4);
+}
+
+.weather-card .text {
+  font-weight: 700;
+  font-size: 20px;
+}
+.weather-card .value {
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.loader {
+  padding-top: 50px;
 }
